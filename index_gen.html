@@ -1,0 +1,64 @@
+
+<head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<!-- Plotly chart will be drawn inside this div -->
+<div id="myDiv"></div>
+<script>
+var xValue = ['2010', '2011', '2012', '2013', '2014', '2015', '2016'];
+
+var yValue = [8087,8515,8820,9094,9664,10199,10238];
+var yValue2 = [30277,31003,31780,32055,33162,33994,34727];
+
+var trace1 = {
+  x: xValue,
+  y: yValue,
+  type: 'bar',
+  text: yValue,
+  name: 'Female',
+  textposition: 'auto',
+  hoverinfo: 'none',
+ // opacity: 0.5
+  <!-- marker: { -->
+    <!-- color: 'rgb(158,202,225)', -->
+    <!-- line: { -->
+      <!-- color: 'rbg(8,48,107)', -->
+      <!-- width: 1.5 -->
+    <!-- } -->
+  <!-- } -->
+};
+
+var trace2 = {
+  x: xValue,
+  y: yValue2,
+  type: 'bar',
+  text: yValue2,
+   name: 'Male',
+  textposition: 'auto',
+  hoverinfo: 'none'
+  <!-- marker: { -->
+    <!-- color: 'rgba(58,200,225,.5)', -->
+    <!-- line: { -->
+      <!-- color: 'rbg(8,48,107)', -->
+      <!-- width: 1.5 -->
+    <!-- } -->
+  <!-- } <!-- marker: { -->
+    <!-- color: 'rgba(58,200,225,.5)', -->
+    <!-- line: { -->
+      <!-- color: 'rbg(8,48,107)', -->
+      <!-- width: 1.5 -->
+    <!-- } -->
+  <!-- } -->
+};
+
+var data = [trace1,trace2];
+
+var layout = {
+  title: 'Suicide by gender'
+};
+
+Plotly.newPlot('myDiv', data, layout);
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<head>
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  
+  <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+  <script>
+    <!-- JAVASCRIPT CODE GOES HERE -->
+	var trace1 = {
+  x: ['female', 'male'], 
+  y: [8087, 30277], 
+  name: '2010', 
+  type: 'bar'
+};
+
+var trace2 = {
+  x: ['female', 'male'], 
+  y: [8515, 31003], 
+  name: '2011', 
+  type: 'bar'
+};
+var trace3 = {
+  x: ['female', 'male'], 
+  y: [8820, 31780], 
+  name: '2012', 
+  type: 'bar'
+};
+var trace4 = {
+  x: ['female', 'male'], 
+  y: [9094, 32055], 
+  name: '2013', 
+  type: 'bar'
+};
+var trace5 = {
+  x: ['female', 'male'], 
+  y: [9664, 33162], 
+  name: '2014', 
+  type: 'bar'
+};
+var trace6 = {
+  x: ['female', 'male'], 
+  y: [10199, 33994], 
+  name: '2015', 
+  type: 'bar'
+};
+var trace7 = {
+  x: ['female', 'male'], 
+  y: [10238, 34727], 
+  name: '2016', 
+  type: 'bar'
+};
+var data = [trace1, trace2,trace3, trace4,trace5, trace6,trace7];
+var layout = {barmode: 'stack'};
+
+Plotly.newPlot('myDiv', data, layout);
+  </script>
+</body>
+
